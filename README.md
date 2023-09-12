@@ -6,6 +6,8 @@ This AWS Lambda function is designed to automatically upgrade the instance type 
 
 Your organization has mandated the use of a specific EC2 instance type ('m1.large') for all workloads due to performance and cost considerations. However, with multiple teams and developers managing resources in your AWS environment, it's challenging to ensure compliance with this mandate. You need an automated solution to enforce the use of the specified EC2 instance type and notify teams when non-compliant instances are created.
 
+![Screenshot](arch.png)
+
 ## Description
 
 **Services Used:**
