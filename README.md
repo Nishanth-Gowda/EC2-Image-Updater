@@ -2,6 +2,19 @@
 
 This AWS Lambda function is designed to automatically upgrade the instance type of an Amazon Elastic Compute Cloud (EC2) instance if it is not of the desired type. The function is triggered by an AWS CloudWatch Events rule, which is typically set up to respond to specific events, such as EC2 instance launches or state changes.
 
+## Problem Statement:
+
+Your organization has mandated the use of a specific EC2 instance type ('m1.large') for all workloads due to performance and cost considerations. However, with multiple teams and developers managing resources in your AWS environment, it's challenging to ensure compliance with this mandate. You need an automated solution to enforce the use of the specified EC2 instance type and notify teams when non-compliant instances are created.
+
+## Description
+
+**Services Used:**
+
+- **AWS Lambda**: AWS Lambda is a serverless compute service that runs your code in response to events and automatically manages the compute resources for you. It is used to implement the core functionality of the use case.
+- **Amazon EC2**: Amazon Elastic Compute Cloud (EC2) is a scalable cloud computing service that allows you to run virtual servers (instances) in the AWS cloud. It provides the infrastructure for hosting applications.
+- **Amazon EventBridge**: Amazon EventBridge is a service that delivers a near real-time stream of system events that describe changes in AWS resources. It is used to trigger the Lambda function based on specific events.
+- **Amazon Identity and Access Management (IAM)**: AWS IAM is used to define the permissions and access control for the Lambda function.
+
 ## How It Works
 
 1. **Event Trigger**: The Lambda function is triggered by an event, typically an EC2 instance launch event, which is passed as the `event` parameter to the `lambda_handler` function.
