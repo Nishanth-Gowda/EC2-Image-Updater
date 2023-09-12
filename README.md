@@ -1,6 +1,6 @@
 ## EC2 Instance Type Upgrader Lambda Function
 
-This AWS Lambda function is designed to automatically upgrade the instance type of an Amazon Elastic Compute Cloud (EC2) instance if it is not of the desired type. The function is triggered by an AWS CloudWatch Events rule, which is typically set up to respond to specific events, such as EC2 instance launches or state changes.
+This AWS Lambda function is designed to automatically upgrade the instance type of an Amazon Elastic Compute Cloud (EC2) instance if it is not of the desired type. The function is triggered by an AWS EventBridge rule, which is typically set up to respond to specific events, such as EC2 instance launches or state changes.
 
 ## Problem Statement:
 
@@ -41,7 +41,7 @@ Your organization has mandated the use of a specific EC2 instance type ('m1.larg
 
 To use this Lambda function effectively:
 
-- **Event Configuration**: Set up an AWS CloudWatch Events rule to trigger this Lambda function when specific EC2 events occur (e.g., instance launches or state changes).
+- **Event Configuration**: Set up an AWS EventBridge rule to trigger this Lambda function when specific EC2 events occur (e.g., instance launches or state changes).
 
 - **IAM Permissions**: Ensure that the Lambda function's execution role has the necessary IAM permissions to describe, stop, and start EC2 instances, as well as modify their attributes.
 
